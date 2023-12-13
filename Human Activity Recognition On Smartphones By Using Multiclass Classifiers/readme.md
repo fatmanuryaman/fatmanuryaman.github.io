@@ -3,7 +3,7 @@
 ## Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
 ## Aim: Multi-Class Classification, ExAI Techniques
 ## Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
-## Hyperparameter Tuning, ExAI: ELI5 & SHAP
+## ExAI: ELI5 & SHAP
 
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 
