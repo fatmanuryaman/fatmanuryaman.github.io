@@ -59,5 +59,5 @@ My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanur
 
 ## Boğaziçi University IT Club - Compec
 ### July 2021 - June 2023
-- Board Member: [Website](https://compec.org/) & 
+- Board Member: [Website](https://compec.org/) & [Presentation](Student%20Clubs/Compec%20Tanıtım%20Dosyası%2022-23.pdf)
 - Organization Team: [Boğaziçi DataCamp Data Science Summit 2021](http://datacamp.bogazici.edu.tr/2021/), +1300 participants, 35 presenters, 12 sponsors, and 10 workshops.
