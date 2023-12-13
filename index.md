@@ -20,6 +20,8 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 #### Aim: Multi-Class Classification, ExAI Techniques
 #### Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
 #### ExAI: ELI5 & SHAP
+Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
+
 
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
