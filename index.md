@@ -50,3 +50,7 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
+# Experiences
+
+## bogaziciai - Independent AI Research Community
+- [PDF Version & Code](Bank%20Customer%20Payment%20Prediction/IE425_HW2_FatmanurYaman_MuratTutar.pdf)
