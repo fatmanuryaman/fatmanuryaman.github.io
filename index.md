@@ -22,6 +22,16 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 #### ExAI: ELI5 & SHAP
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 
+## EDA For Heart Attack Prediction & Turkish Car Market
+### April 2023
+- [HTML version](EDA/heart-attack-analysis.html)
+- [HTML version](EDA/car.html)
+- [Jupyter Notebook version](EDA/heart-attack-analysis.ipynb)
+- [Jupyter Notebook version](EDA/car.ipynb)
+## Dataset: [heart-attack-analysis-prediction-dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset) & [turkey-car-market](https://www.kaggle.com/code/alpertemel/turkey-car-market/input)
+## Aim: EDA & Data Preprocessing
+Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
+
 
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
