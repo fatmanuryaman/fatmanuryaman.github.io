@@ -48,7 +48,12 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 #### Used ML Architecures: Hierarchical Clustering & K-Means
 Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 
-My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
+## Generation of Graphs With Prescribed Degrees
+### May 2023
+- [PDF Version](THE%20COMPARISON%20OF%20ALGORITHMS%20FOR%20GENERATING%20RANDOM%20GRAPHS%20WITH%20PRESCRIBED%20DEGREES%20.docx.pdf)
+- [Code in R](ie_456_group7_project/ie_456_group7_project_code.txt.txt)
+#### Keywords: Random Graph Generation, Havel-Hakimi, Erdos-Renyi
+Done for IE456 - Graph Theory and Applications course offered in Boğaziçi University Spring 2023.
 
 # Experiences
 
