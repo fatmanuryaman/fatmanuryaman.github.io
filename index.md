@@ -40,5 +40,13 @@ Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi Universit
 #### Used ML Architecures: Random Forest & Gradient Boosting Machine & Cross Validation
 Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 
+## The Customer Clustering For An Airline Company Project
+### May 2023
+- [PDF Version & Code](Customer%20Clustering%20for%20an%20Airline%20Company/IE425_HW3_Yaman_Tutar.pdf)
+#### Dataset: [EastWestAirlines.csv](Customer%20Clustering%20for%20an%20Airline%20Company/EastWestAirlines.xlsx)
+#### Aim: Clustering
+#### Used ML Architecures: Hierarchical Clustering & K-Means
+Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
+
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
