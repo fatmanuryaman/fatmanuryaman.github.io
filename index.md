@@ -34,6 +34,7 @@ Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi Universit
 
 ## The Bank Customer Payment Prediction Project
 ### April 2023
+- [PDF Version & Code](Bank%20Customer%20Payment%20Prediction/IE425_HW2_FatmanurYaman_MuratTutar.pdf)
 #### Dataset: [bank.csv](AI%20In%20Healthcare/bank.csv)
 #### Aim: Binary Classification
 #### Used ML Architecures: Random Forest & Gradient Boosting Machine & Cross Validation
