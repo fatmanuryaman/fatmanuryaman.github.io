@@ -1,0 +1,146 @@
+random_degree_sequence <- function(n) {
+  seq <- floor(c(runif(1:n,0,n)))
+  while (!is_graphical(seq)) { #making sure that we obtain a graphical sequence
+    seq <- sample(1:(n-1), n, replace = TRUE)
+  }
+  return(seq)
+}
+
+is_graphical <- function(seq) {
+  while (TRUE) {
+    seq <- sort(seq, decreasing = TRUE)
+    if (all(seq == 0)) {
+      return(TRUE)
+    }
+    if (any(seq < 0) || any(is.na(seq))) {
+      return(FALSE)
+    }
+    k <- seq[1]
+    seq <- seq[-1]
+    n <- length(seq)
+    if (k > n) {
+      return(FALSE)
+    }
+    seq[1:k] <- seq[1:k] - 1
+  }
+}
+
+is_connected <- function(adj_matrix) {
+  start<-1
+  n <- nrow(adj_matrix)
+  visited <- rep(FALSE, n) #This vector keeps track of whether each vertex has been visited during the search for connected components.
+  queue <- c()
+  visited[start] <- TRUE
+  queue<-c(queue,start)
+  
+  while (length(queue) > 0) {
+    current <- queue[1]
+    queue <- queue[-1]
+    neighbors <- which(adj_matrix[current, ] == 1)
+    for (neighbor in neighbors) {
+      if (!visited[neighbor]) {
+        visited[neighbor] <- TRUE
+        queue <- c(queue, neighbor)
+      }
+    }
+  }
+  return(all(visited))
+}
+
+#making the graph connected using pairwise edge interchanges
+#swapping edges in the adjacency matrix
+swap_edges <- function(adj_matrix, niter = 100) {
+  n <- nrow(adj_matrix)
+  number_swaps <- 0
+  for (iter in 1:niter) {
+    edges <- which(adj_matrix == 1, arr.ind = TRUE)
+    e1 <- edges[sample(nrow(edges), 1), ]
+    e2 <- edges[sample(nrow(edges), 1), ]
+    max_attempts <- 100 #to avoid infinite loop
+    for (attempt in 1:max_attempts) {
+      e2 <- edges[sample(nrow(edges), 1), ]
+      if (!any(is.na(e1)) && !any(is.na(e2)) && e1[1] != e2[1] && e1[1] != e2[2] && e1[2] != e2[1] && e1[2] != e2[2]) {
+        break 
+      }
+    }
+    
+    if (adj_matrix[e1[1], e2[1]] == 0 && adj_matrix[e1[2], e2[2]] == 0) {
+      number_swaps <- number_swaps+1
+      #removing original edges
+      adj_matrix[e1[1], e1[2]] <- 0
+      adj_matrix[e1[2], e1[1]] <- 0
+      adj_matrix[e2[1], e2[2]] <- 0
+      adj_matrix[e2[2], e2[1]] <- 0
+      
+      #adding new edges
+      adj_matrix[e1[1], e2[1]] <- 1
+      adj_matrix[e2[1], e1[1]] <- 1
+      adj_matrix[e1[2], e2[2]] <- 1
+      adj_matrix[e2[2], e1[2]] <- 1
+    }
+  }
+  
+  return(number_swaps)
+}
+
+
+
+#First Algorithm:
+#Havel-Hakimi Algorithm with Random Vertex Selection, distributed to the Highest Degree
+random_vertex_highest_degree <- function(n) {
+  degree_seq <- random_degree_sequence(n)
+  start_time <- Sys.time() #measuring the time taken to generate a graph
+  output_list <- c() #collecting to  the output
+  n <- length(degree_seq)
+  adj_matrix <- matrix(0, nrow = n, ncol = n) #building the adjacency matrix
+  
+  while (sum(degree_seq) > 0) {
+    idx <- sample(n, 1) #selecting random vertex
+    if (degree_seq[idx] == 0) {
+      next
+    }
+    
+    indices <- order(degree_seq, decreasing = TRUE) #ranking the degree sequence in decreasing order
+    target_vertices <- indices[degree_seq[indices] > 0] 
+    target_vertices <- target_vertices[target_vertices != idx]
+    target_vertices <- target_vertices[1:degree_seq[idx]] 
+    
+    for (i in 1:length(target_vertices)) { 
+      adj_matrix[idx, target_vertices[i]] <- 1 #1 in the adjacency matrix meaning that there is a connection between the corresponding vertices
+      adj_matrix[target_vertices[i], idx] <- 1 #the connection is bidirectional
+    }
+    degree_seq[idx] <- 0
+    degree_seq[target_vertices] <- degree_seq[target_vertices] - 1
+  }
+  connectivity <- is_connected(adj_matrix)
+  if (!is_connected(adj_matrix)) {
+    num <- swap_edges(adj_matrix, niter=n*(n-1)/2)
+  }
+  end_time <- Sys.time()
+  elapsed_time <- end_time - start_time
+  output_list <- append(output_list,c(connectivity, num,elapsed_time))
+  return(output_list)
+}
+
+
+n_list <- c(5,25,50,100,500,1000)
+avg_list <- c()
+for (k in (1:length(n_list))){
+  connected_graphs <- 0
+  total_time <- 0
+  num_of_swaps <- 0
+  i <- 0
+  while (i<100){
+    set.seed(i)
+    output <- random_vertex_highest_degree(n_list[k])
+    total_time <- total_time+output[3]
+    connected_graphs <- connected_graphs+output[1]
+    num_of_swaps <- num_of_swaps + output[2]
+    i <- i+1
+  }
+  avg_time <- total_time/i
+  avg_connectivity <- connected_graphs/i
+  avg_list <- append(avg_list, c(avg_time, avg_connectivity , num_of_swaps))
+}
+
+cat(avg_list)
