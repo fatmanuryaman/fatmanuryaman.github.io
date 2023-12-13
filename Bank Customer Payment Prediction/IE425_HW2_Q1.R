@@ -1,0 +1,106 @@
+## Caret package
+
+library(caret)
+library(caTools)
+
+
+raw_data=read.csv("C:\\Users\\fatma\\Desktop\\IE425_HW2\\bank.csv", sep=";")
+head(raw_data)
+raw_data$y <- as.factor(raw_data$y)
+
+#1a. Train Test Split
+set.seed(425)
+split<-sample.split(raw_data$y, SplitRatio = 0.8)
+train<-subset(raw_data, split==TRUE)
+test<-subset(raw_data, split==FALSE)
+
+
+#1b. Best Random Forest with 10-Fold CV
+library(randomForest)
+library(Metrics)
+
+#Create cadidates for mtry and ntree.
+mtry_tuning_seq <- seq(3,6,1)
+ntree_tuning_seq <- seq(100,400,100)
+
+best_accuracy <- 1
+#Find the best parameters by trying the different values with for loops.
+for (i in mtry_tuning_seq){
+  for (j in ntree_tuning_seq){
+    best_parameters <- list()
+    set.seed(425)
+    ctrl <- trainControl(method='repeatedcv', number=10, repeats=5)
+    rf_parameters <- randomForest(y~., data=train, mtry=i, ntree=j, trControl=ctrl,importance=TRUE)
+    rf_perdictions <- predict(rf_parameters, newdata=test)
+    accuracy <- accuracy(actual=test$y, predicted=rf_perdictions)
+    if (accuracy <= best_accuracy){
+      best_accuracy <- accuracy
+      new_parameters <- append(best_parameters, c(i,j))
+    }
+  }
+}
+
+best_parameters_int = as.integer(new_parameters)
+new_parameters
+
+cat("The best mtry: ",new_parameters[[1]], "and the best ntree: ", new_parameters[[2]])
+
+#1c. Out-Of-Bag Accuracy
+set.seed(425)
+#Cross Validation
+ctrl <- trainControl(method='repeatedcv', number=10, repeats=5)
+#Setting the model.
+rf_final_model <- randomForest(y~., data=train, mtry=as.integer(new_parameters[[1]]),
+                               ntree=as.integer(new_parameters[[2]]), trControl=ctrl,
+                               importance=TRUE)
+#Making the predictions.
+rf_perdictions_final <- predict(rf_final_model, newdata=test)
+oob_error <- rf_final_model$err.rate[length(rf_final_model),1]
+
+cat("The Out-Of-Bag Error is: ", oob_error)
+
+
+#The Importance Table
+round(importance(rf_final_model),2)
+varImpPlot(rf_final_model)
+
+
+#1d. Confusion Matrix
+confusionMatrix(rf_perdictions_final,test$y,positive = "yes")
+
+#1e. Gradient Boosting Machine Parameter Tuning
+install.packages("gbm")
+library(gbm)
+
+
+gbmGrid=expand.grid(interaction.depth = c(3,4,5), 
+                    n.trees = (5:10)*10, 
+                    shrinkage = (1:3)*0.1,
+                    n.minobsinnode = 20)
+set.seed(425)
+library(caret)
+ctrl1 <- trainControl(method="cv",number=10)
+gbm_model <- train(y~., data=train, method="gbm", metric="Accuracy",verbose = FALSE,
+                   trControl = ctrl1,tuneGrid = gbmGrid)
+#Finding the max accuracy index.
+max_accuracy <- which.max(gbm_model$results$Accuracy)
+
+cat("The best boosting tree is: shrinkage: ", gbm_model$results$shrinkage[max_accuracy], 
+    " intearction.depth  :", gbm_model$results$interaction.depth[max_accuracy],
+    " n.minobsinnode: ", gbm_model$results$n.minobsinnode[max_accuracy],
+    " n.trees: ", gbm_model$results$n.trees[max_accuracy])
+
+#1f. Confusion Matrix
+set.seed(425)
+ctrl1 <- trainControl(method="cv",number=10)
+gbm_model_final <- train(y~., data=train, method="gbm", metric="Accuracy",verbose = FALSE,
+                   trControl = ctrl1, tuneGrid=expand.grid(shrinkage=0.3,
+                   interaction.depth=3,
+                   n.minobsinnode=20,
+                   n.trees=100))
+
+gbm_perdictions <- predict(gbm_model, newdata=test)
+
+confusionMatrix(gbm_perdictions,test$y,positive = "yes")
+
+
