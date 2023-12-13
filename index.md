@@ -64,16 +64,16 @@ My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanur
 
 ## -Mercedes-Benz Otomotiv: Business Intelligence & Analytics Intern
 ### July 2023 - Present
-#### SAP WebI, SAP Data Services, Microsoft PowerBI, Microsoft SQL, Python, Jira.
+- SAP WebI, SAP Data Services, Microsoft PowerBI, Microsoft SQL, Python, Jira.
 
 ## -Roche: Data & Analytics Intern
 ### September 2022 - June 2023
-#### Tableau, Microsoft SQL.
+- Tableau, Microsoft SQL.
 
 ## -Mercedes-Benz Türk: Maintenance Planning Intern
 ### August 2022 - September 2022
-#### Microsoft PowerBI, Python, SAP
+- Microsoft PowerBI, Python, SAP
 
 ## -Chex: Data Science Intern
 ### February 2022 - July 2022
-#### Python, Firebase, NLP.
+- Python, Firebase, NLP.
