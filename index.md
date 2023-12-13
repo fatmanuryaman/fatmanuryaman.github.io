@@ -1,11 +1,5 @@
 ## Welcome to Fatmanur's Space
 
-```markdown
-Hi,
-
-Here is my page for IE 423 - Quality Engineering lecture in Fall 2023.
-
-```
 ## The Covid-19 CT Scan Prediction Project:
 ### December 2023
 - [HTML version](AI%20In%20Healthcare/Fatmanur_Yaman_CMPE_49T_Assignment4_ResNet50.html)
