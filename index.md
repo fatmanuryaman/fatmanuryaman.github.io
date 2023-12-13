@@ -54,5 +54,5 @@ My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanur
 
 ## bogaziciai - Independent AI Research Community
 ### July 2021 - June 2023
-- [Linear Regression](bogaziciai%20-%20Tasks/LinearRegression_FatmanurYaman.html) & [Gradient Descent](bogaziciai%20-%20Tasks/GradientDescent_FatmanurYaman.html) &  [Logistic Regression](bogaziciai%20-%20Tasks/LogisticRegression_fatmanur.html) & [Neural Networks](bogaziciai%20-%20Tasks/NeuralNetworksFatmanurYaman.html)
-- [Winter Camp held in TED Atakent College](https://www.linkedin.com/posts/fatmanuryaman_as-bogaziciai-after-the-summer-camp-spent-activity-7016101901633007616-DYF9?utm_source=share&utm_medium=member_desktop)
+- Completed First Level Tasks: [Linear Regression](bogaziciai%20-%20Tasks/LinearRegression_FatmanurYaman.html) & [Gradient Descent](bogaziciai%20-%20Tasks/GradientDescent_FatmanurYaman.html) &  [Logistic Regression](bogaziciai%20-%20Tasks/LogisticRegression_fatmanur.html) & [Neural Networks](bogaziciai%20-%20Tasks/NeuralNetworksFatmanurYaman.html)
+- Organization Team: [Winter Camp held in TED Atakent College](https://www.linkedin.com/posts/fatmanuryaman_as-bogaziciai-after-the-summer-camp-spent-activity-7016101901633007616-DYF9?utm_source=share&utm_medium=member_desktop)
