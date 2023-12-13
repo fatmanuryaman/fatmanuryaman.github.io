@@ -16,10 +16,10 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 - [HTML version](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition.html)
 - [Jupyter Notebook version](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition.ipynb)
 - [PDF Report](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition%20On%20Smartphones%20Using%20Multi-Class%20Classifiers.pdf)
-## Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
-## Aim: Multi-Class Classification, ExAI Techniques
-## Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
-## ExAI: ELI5 & SHAP
+#### Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
+#### Aim: Multi-Class Classification, ExAI Techniques
+#### Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
+#### ExAI: ELI5 & SHAP
 
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
