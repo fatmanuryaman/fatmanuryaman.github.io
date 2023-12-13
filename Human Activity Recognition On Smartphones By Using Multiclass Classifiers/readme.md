@@ -1,13 +1,11 @@
-<h1> MIS 49-Y PROJECT</h1>
-
-<h3> FATMANUR YAMAN - FATİH YUSUF ÇIRA</h3>
-
-
-# The Covid-19 CT Scan Prediction Project
+# The Human Activity Recognition On Smartphones By Using Multiclass Classifiers Project
 
 ## Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
-## Aim: Multi-Class Naive Bayes, SVM, KNN, XGBoost, NN
-Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 2023.
+## Aim: 
+## Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
+## Hyperparameter Tuning, ExAI: ELI5 & SHAP
+
+Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 
 
 <h5> This study explores the effectiveness of different machine learning
