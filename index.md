@@ -32,6 +32,12 @@ Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi Universit
 #### Aim: EDA & Data Preprocessing
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 
+## The Bank Customer Payment Prediction Project
+### April 2023
+#### Dataset: [bank.csv](AI%20In%20Healthcare/bank.csv)
+#### Aim: Binary Classification
+#### Used ML Architecures: Random Forest & Gradient Boosting Machine & Cross Validation
+Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 
 My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanuryaman/edit/main/index.md)
 
