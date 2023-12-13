@@ -1,7 +1,7 @@
 # The Human Activity Recognition On Smartphones By Using Multiclass Classifiers Project
 
 ## Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
-## Aim: 
+## Aim: Multi-Class Classification, ExAI Techniques
 ## Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
 ## Hyperparameter Tuning, ExAI: ELI5 & SHAP
 
