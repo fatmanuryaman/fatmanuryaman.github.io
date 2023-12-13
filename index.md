@@ -58,6 +58,22 @@ My GitHub page: [editor on GitHub](https://github.com/BU-IE-423/fall-23-fatmanur
 - Organization Team: [Winter Camp held in TED Atakent College](https://www.linkedin.com/posts/fatmanuryaman_as-bogaziciai-after-the-summer-camp-spent-activity-7016101901633007616-DYF9?utm_source=share&utm_medium=member_desktop)
 
 ## Boğaziçi University IT Club - Compec
-### July 2021 - June 2023
+### October 2020 - June 2023
 - Board Member: [Website](https://compec.org/) & [Presentation](Student%20Clubs/Compec%20Tanıtım%20Dosyası%2022-23.pdf)
-- Organization Team: [Boğaziçi DataCamp Data Science Summit 2021](http://datacamp.bogazici.edu.tr/2021/), +1300 participants, 35 presenters, 12 sponsors, and 10 workshops.
+- Organization Team: [Boğaziçi DataCamp Data Science Summit 2021](http://datacamp.bogazici.edu.tr/2021/)
+
+## Mercedes-Benz Otomotiv: Business Intelligence & Analytics Intern
+### July 2023 - Present
+#### SAP WebI, SAP Data Services, Microsoft PowerBI, Microsoft SQL, Python, Jira.
+
+## Roche: Data & Analytics Intern
+### September 2022 - June 2023
+#### Tableau, Microsoft SQL.
+
+## Mercedes-Benz Türk: Maintenance Planning Intern
+### August 2022 - September 2022
+#### Microsoft PowerBI, Python, SAP
+
+## Chex: Data Science Intern
+### February 2022 - July 2022
+#### Python, Firebase, NLP.
