@@ -1,4 +1,4 @@
-# Projects | Boğaziçi University, Turkey |2020-2024 Industrial Engineering
+# Projects
 
 ## The Covid-19 CT Scan Prediction Project:
 ### December 2023
