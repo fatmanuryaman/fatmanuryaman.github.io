@@ -6,8 +6,6 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 - The Code: [ResNet50](AI%20In%20Healthcare/Fatmanur_Yaman_CMPE_49T_Assignment4_ResNet50.html), [ResNet18 ModelTraining](AI%20In%20Healthcare/ResNet18%20Model%20Training.ipynb), [ResNet18 Blocks Building](AI%20In%20Healthcare/ResNet18%20Blocks.html), [Data Process & Augmentation](AI%20In%20Healthcare/Data%20Preprocessing%20%26%20Augmentation.html)
 - [PDF Report](AI%20In%20Healthcare/Improvement%20Ideas%20ResNet18.pdf)
 
-
-
 ## Human Activity Recognition On Smartphones By Using Multiclass Classifiers:
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 ##### Aim: Multi-Class Classification, ExAI Techniques & Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost & ExAI: ELI5 & SHAP
@@ -31,6 +29,12 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 - [PDF Report & Code](Customer%20Clustering%20for%20an%20Airline%20Company/IE425_HW3_Yaman_Tutar.pdf)
 #### Aim: Clustering
 #### Used ML Architecures: Hierarchical Clustering & K-Means
+
+## IBM Stock Prices Time Series Modeling:
+Done for IE360- Time Series & Forecasting course offered in Boğaziçi University Spring 2023.
+##### Aim: Time Series Forecasting & Used ML Architecture: ARIMA , Augmented Dickey Fuller Test
+- [The Code & Report](IBM%20Stock%20Prices%20Time%20Series%20Modeling/IE360_HW3_FATMANUR_YAMAN.pdf)
+
 
 ## Generation of Graphs With Prescribed Degrees
 Done for IE456 - Graph Theory and Applications course offered in Boğaziçi University Spring 2023.
