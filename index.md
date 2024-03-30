@@ -22,6 +22,11 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 ##### Aim: Clustering & Used ML Architecures: Hierarchical Clustering & K-Means
 - [PDF Report & Code](Customer%20Clustering%20for%20an%20Airline%20Company/IE425_HW3_Yaman_Tutar.pdf)
 
+## E-Mail Spam Detection & Car Price Prediction
+Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
+##### Aim: Classification & Used ML Architecures: Decision Trees, Random Forests
+- [PDF Report & Code](Spam%20Detection%20%20%26%20Car%20Price%20Prediction/Classification%20of%20Emails%20Using%20R.pdf)
+
 ## IBM Stock Prices Time Series Modeling:
 Done for IE360- Time Series & Forecasting course offered in Boğaziçi University Spring 2023.
 ##### Aim: Time Series Forecasting & Used ML Architecture: ARIMA , Augmented Dickey Fuller Test
