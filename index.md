@@ -10,11 +10,9 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 
 ## Human Activity Recognition On Smartphones By Using Multiclass Classifiers:
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
+##### Aim: Multi-Class Classification, ExAI Techniques & Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost & ExAI: ELI5 & SHAP
 - [The Code](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition.html)
 - [PDF Report](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition%20On%20Smartphones%20Using%20Multi-Class%20Classifiers.pdf)
-#### Aim: Multi-Class Classification, ExAI Techniques
-#### Used ML Architecture: Multi-Class Naive Bayes, SVM, KNN, XGBoost.
-#### ExAI: ELI5 & SHAP
 
 ## EDA For Heart Attack Prediction & Turkish Car Market
 Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
