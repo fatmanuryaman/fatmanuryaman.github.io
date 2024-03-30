@@ -27,7 +27,7 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 ##### Aim: Classification & Used ML Architecures: Decision Trees, Random Forests
 - [PDF Report & Code](Spam%20Detection%20%20%26%20Car%20Price%20Prediction/Classification%20of%20Emails%20Using%20R.pdf)
 
-## IBM Stock Prices Time Series Modeling:
+## IBM Stock Prices Time Series Modeling
 Done for IE360- Time Series & Forecasting course offered in Boğaziçi University Spring 2023.
 ##### Aim: Time Series Forecasting & Used Methods: ARIMA, Augmented Dickey Fuller Test
 - [The Code & Report](IBM%20Stock%20Prices%20Time%20Series%20Modeling/IE360_HW3_FATMANUR_YAMAN.pdf)
