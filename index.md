@@ -8,7 +8,7 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 
 
 ## The Human Activity Recognition On Smartphones By Using Multiclass Classifiers Project:
-### Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
+Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 - [The Code](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition.html)
 - [PDF Report](Human%20Activity%20Recognition%20On%20Smartphones%20By%20Using%20Multiclass%20Classifiers/Human%20Activity%20Recognition%20On%20Smartphones%20Using%20Multi-Class%20Classifiers.pdf)
 #### Dataset: https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones
@@ -17,26 +17,24 @@ Done for CMPE49T- AI In Healthcare course offered in Boğaziçi University Fall 
 #### ExAI: ELI5 & SHAP
 
 ## EDA For Heart Attack Prediction & Turkish Car Market
-### Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
+Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi University Spring 2023 by Fatmanur Yaman & Fatih Yusuf Çıra.
 - [HTML version - Heart Attack Prediction](EDA/heart-attack-analysis.html)
 - [HTML version - Turkish Car Market](EDA/car.html)
 #### Dataset: [heart-attack-analysis-prediction-dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset) & [turkey-car-market](https://www.kaggle.com/code/alpertemel/turkey-car-market/input)
 #### Aim: EDA & Data Preprocessing
 
 ## The Bank Customer Payment Prediction Project
-### Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
+Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 - [PDF Version & Code](Bank%20Customer%20Payment%20Prediction/IE425_HW2_FatmanurYaman_MuratTutar.pdf)
 #### Dataset: [bank.csv](AI%20In%20Healthcare/bank.csv)
 #### Aim: Binary Classification
 #### Used ML Architecures: Random Forest & Gradient Boosting Machine & Cross Validation
 
 ## The Customer Clustering For An Airline Company Project
-### May 2023
+Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 - [PDF Version & Code](Customer%20Clustering%20for%20an%20Airline%20Company/IE425_HW3_Yaman_Tutar.pdf)
-#### Dataset: [EastWestAirlines.csv](Customer%20Clustering%20for%20an%20Airline%20Company/EastWestAirlines.xlsx)
 #### Aim: Clustering
 #### Used ML Architecures: Hierarchical Clustering & K-Means
-Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023.
 
 ## Generation of Graphs With Prescribed Degrees
 ### May 2023
