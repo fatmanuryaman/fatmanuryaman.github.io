@@ -29,7 +29,7 @@ Done for IE425 - Data Mining course offered in Boğaziçi University Spring 2023
 
 ## IBM Stock Prices Time Series Modeling:
 Done for IE360- Time Series & Forecasting course offered in Boğaziçi University Spring 2023.
-##### Aim: Time Series Forecasting & Used ML Architecture: ARIMA , Augmented Dickey Fuller Test
+##### Aim: Time Series Forecasting & Used Methods: ARIMA, Augmented Dickey Fuller Test
 - [The Code & Report](IBM%20Stock%20Prices%20Time%20Series%20Modeling/IE360_HW3_FATMANUR_YAMAN.pdf)
 
 ## Performance Comparison of Multi-Layer Perceptron and Polynomial Regression
