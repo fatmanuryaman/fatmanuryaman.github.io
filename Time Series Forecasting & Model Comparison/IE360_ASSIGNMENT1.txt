@@ -1,0 +1,242 @@
+NumbergenerationFnc <- function(ID.last.three.seed=204,part=1){
+  set.seed(ID.last.three.seed)
+  b_0 <- ceiling(runif(1)*1000)/10
+  c1 <- ceiling(runif(1)*1000)/10
+  c2 <- ceiling(runif(1)*1000)/10
+  m <- 5000 + ceiling(runif(1)*5000)
+  v <- 2000 + ceiling(runif(1)*3000)
+  numero <- 20 + runif(1)*88
+  k <- 1:numero
+  if(part!=1){
+    x <- b_0 + c1*k -c2 *k^2 +rnorm(numero)*v + m
+    print(paste("Eqn. is: Y_t=",b_0,"+",c1,"*t -",c2,"*t^2 +","e_t"))
+    print(paste("e_t is iid ~ N(",m,",", v^2,")"))
+  }
+  else{
+    c1 <- ceiling(runif(1)*1000)/10
+    x <- b_0 + c1*k + rnorm(numero)*v/3.e1 + m/3.e1
+    print(paste("Eqn. is: Y_t=",b_0,"+",c1,"*t +","e_t"))
+    print(paste("e_t is iid ~ N(",m/3.e1,",", (v/3.e1)^2,")"))
+  }
+  diff1 <- ceiling(2+runif(1)*5)
+  diff2 <- ceiling(2+runif(1)*5)
+  print(paste("Differences that should be applied are:",diff1,diff2))
+  return(x)
+}
+
+data_points = NumbergenerationFnc(ID.last.three.seed=204,part=1)
+data_points
+
+length(data_points)
+first_data = data_points[0:30]
+first_data
+last_5 = data_points[31:35]
+last_5
+
+#MA
+moving_average_results = c()
+simple_moving_average = function(data, k){
+  len = length(data)
+  for (t in 1:(len-k+1)){
+    sum_mt=0
+    for(j in 0:(k-1)){
+      sum_mt= sum_mt+data[t+j]
+    }
+    m_t=sum_mt/k
+    moving_average_results=append(moving_average_results, m_t)
+  }
+  return(moving_average_results)
+}
+
+
+#Forecasting
+forecastor_results = c()
+forecastor=function(ma, double_ma, k){
+  len = length(double_ma)
+  for (i in 1:len){
+    print(ma[i+k-1])
+    print(double_ma[i])
+    forecast=(2*ma[i+k-1]-double_ma[i])+((2*(ma[i+k-1]-double_ma[i])/(k-1)))
+    print(forecast)
+    forecastor_results=append(forecastor_results, forecast)
+  }
+  return(forecastor_results)
+}
+
+#Forecasting New Observations
+forecastor_last5_results=c()
+forecastor_last5=function(ma, double_ma, k, t){
+  len = length(double_ma)
+  for (i in 1:t){
+    forecast=(2*ma[len+k-i]-double_ma[len])+((2/(k-1))*(ma[len+k-1]-double_ma[len])*i)
+    forecastor_last5_results=append(forecastor_last5_results, forecast)
+  }
+  return(forecastor_last5_results)
+}
+
+#MSE
+mse=function(actual,predicted,lag){
+  mse_sum=0
+  len=length(predicted)
+  for (i in 1:len){
+    print(actual[i+2*lag-2])
+    print(predicted[i])
+    squared_diff = (actual[i+2*lag-2]-predicted[i])^2
+    mse_sum = mse_sum+squared_diff
+  }
+  mse=mse_sum/len
+  return(mse)
+}
+
+#MAPE
+mape=function(actual,predicted,lag){
+  mape_sum=0
+  len=length(predicted)
+  for (i in 1:len){
+    diff = actual[i+2*lag-2]-predicted[i]
+    if (diff>0){
+      diff
+    } else{
+      diff=-1*diff
+    }
+    final_diff = diff/actual[i+lag-1]
+    mape_sum = mape_sum+final_diff
+  }
+  mape=mape_sum/len
+  return(mape)
+}
+
+data_points = NumbergenerationFnc(ID.last.three.seed=204,part=1)
+data_points
+first_data = data_points[0:30]
+first_data
+last_5 = data_points[31:35]
+last_5
+
+ma_5 = simple_moving_average(first_data,5)
+ma_5
+
+double_ma_5 =simple_moving_average(ma_5,5)
+double_ma_5
+
+forecasts_5 = forecastor(ma_5, double_ma_5,5)
+forecasts_5
+
+forecasts_last5_5 = forecastor_last5(ma_5, double_ma_5,5,5)
+forecasts_last5_5
+
+mse_5=mse(first_data,forecasts_5,5)
+mse_5
+mape_5=mape(first_data,forecasts_5,5)
+mape_5
+
+
+ma_4 = simple_moving_average(first_data,4)
+ma_4
+
+double_ma_4 =simple_moving_average(ma_4,4)
+double_ma_4
+
+forecasts_4 = forecastor(ma_4, double_ma_4,4)
+forecasts_4
+
+forecasts_last5_4 = forecastor_last5(ma_4, double_ma_4,4,5)
+forecasts_last5_4
+
+mse_4=mse(first_data,forecasts_4,4)
+mse_4
+mape_4=mape(first_data,forecasts_4,4)
+mape_4
+
+
+dates=seq(as.Date("2002-07-01"),by="1 month", length.out=length(last_5))
+last5_ts=ts(last_5, start=c(2002,07),frequency=12)
+plot(last5_ts)
+dates=seq(as.Date("2002-07-01"),by="1 month", length.out=length(forecasts_last5_5))
+forecasts_last5_5_ts=ts(forecasts_last5_5, start=c(2002,07),frequency=12)
+lines(forecasts_last5_5_ts,col="red")
+
+dates=seq(as.Date("2000-01-01"),by="1 month", length.out=length(first_data))
+actual_ts=ts(first_data, start=c(2000,01),frequency=12)
+plot(actual_ts)
+dates=seq(as.Date("2000-01-01"),by="1 month", length.out=length(forecasts_5))
+forecast_ts=ts(forecasts_5, start=c(2000,09),frequency=12)
+lines(forecast_ts,col="red")
+
+dates=seq(as.Date("2000-01-01"),by="1 month", length.out=length(data_points))
+data_ts=ts(data_points, start=c(2000,01),frequency=12)
+plot(data_ts)
+dates=seq(as.Date("2000-01-01"),by="1 month", length.out=length(forecasts_5))
+forecast_ts=ts(forecasts_5, start=c(2000,09),frequency=12)
+lines(forecast_ts,col="red")
+forecasts_last5_5_ts=ts(forecasts_last5_5, start=c(2002,07),frequency=12)
+lines(forecasts_last5_5_ts,col="green")
+
+
+
+#1.b
+
+sample_covariance=function(x,y){
+  x_mean=mean(x)
+  y_mean=mean(y)
+  len=length(x)
+  diff_sum=0
+  x_diff_sum=0
+  y_diff_sum=0
+  for (i in 1:len){
+    x_diff=x[i]-x_mean
+    y_diff=y[i]-y_mean
+    x_diff_sum=x_diff_sum+x_diff^2
+    y_diff_sum=y_diff_sum+y_diff^2
+    diff_sum=diff_sum+x_diff*y_diff
+  }
+  covariance_data=diff_sum/(len-1)
+  x_sd=sqrt(x_diff_sum/(len-1))
+  y_sd=sqrt(y_diff_sum/(len-1))
+  correlation_data=covariance_data/(x_sd*y_sd)
+  return(correlation_data)
+}
+
+sample_covariance(first_data[9:30],forecasts_5)
+
+autocorrelation=function(x,k){
+  len=length(x)
+  x_mean=mean(x)
+  sum_diff=0
+  sum_mean=0
+  for (i in (k+1):len){
+    diff_sum=(x[i]-x_mean)*(x[i-k]-x_mean)
+    sum_diff=sum_diff+diff_sum
+  }
+  for (i in 1:len){
+    mean_sum=(x[i]-x_mean)^2
+    sum_mean=sum_mean+mean_sum
+  }
+  autocorr_coef=sum_diff/sum_mean
+  return(autocorr_coef)
+}
+
+autocorr_final=function(x,b){
+  autocorr_list=c()
+  for (j in 0:b){
+    autocorr=autocorrelation(x,j)
+    autocorr_list=append(autocorr_list,autocorr)
+  }
+  return(autocorr_list)
+}
+
+autocorr_final(first_data[9:30],10)
+
+difference_list=c()
+first_difference=function(x,k){
+  len=length(x)
+  for (i in (k+1):len){
+    difference=x[i]-x[i-k]
+    difference_list=append(difference_list,difference)
+  }
+  return(difference_list)
+}
+diff_1=first_difference(first_data[9:30],5)
+autocorr_final(diff_1,10)
+plot(diff_1)
+
