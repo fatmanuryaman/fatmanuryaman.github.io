@@ -44,6 +44,12 @@ Done for MIS49Y- Applied Machine Learning course offered in Boğaziçi Universit
 - [The Code - Turkish Car Market](EDA/car.html)
 #### Aim: EDA & Data Preprocessing
 
+## Search Methods
+Done for IE440- Nonlinear Models in OR course offered in Boğaziçi University Fall 2024.
+#### Aim: Nonlinear Modeling & Used Methods:Bisection Method, Golden Section Method, Newton’s Method, Secant Method, Cyclic Coordinate Search, Hook & Jeeves Method, and Simplex Search Method
+- [The Code & Report 1](Search%20Methods/IE440_HW1_Report.pdf) & [The Code & Report 2](Search%20Methods/IE440_HW3_Report.pdf)
+
+
 # Experiences
 
 ### bogaziciai - Independent AI Research Community  (July 2021 - June 2023)
